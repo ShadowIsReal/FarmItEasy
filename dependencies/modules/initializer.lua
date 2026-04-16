@@ -20,12 +20,6 @@ function initializer.load_environment(load_data, repo : string)
             getgenv()[module_name] = loadstring( repo .. "/dependencies/modules/" .. module_name .. ".lua")()
         end
     end
-
-    --// macros
-
-    getgenv().LPH_NO_VIRTUALIZE = function(f)
-        return f
-    end
 end
 
 return initializer
